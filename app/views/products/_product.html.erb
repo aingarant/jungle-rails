@@ -7,9 +7,22 @@
     </h1>
   <% end%>
   <div>
+
+ <%
+=begin%>
+ If product is sold out, display sold out button and disable Add button.  
+<%
+=end%>
+
+   <% if product.quantity == 0 %>
+      <span class="soldout user-select-none">Sold Out</span>
+      <button type="button" class="btn" disabled>Add</button>
+    <% else %>
+  
     <%= button_to add_item_cart_path(product_id: product.id), class: 'btn' ,
     method: :post do %>
       <%= fa_icon "shopping-cart", text: 'Add' %> 
     <% end %>
+     <% end %>
   </div>
 </article>
