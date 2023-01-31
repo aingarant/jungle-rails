@@ -13,7 +13,7 @@
 // please read our getting started guide:
 // https://on.cypress.io/introduction-to-cypress
 
-describe('User Login', () => {
+describe('Add to cart', () => {
   // beforeEach(() => {
   //   // Cypress starts out with a blank slate for each test
   //   // so we must tell it to visit our website with the `cy.visit()` command.
@@ -23,31 +23,27 @@ describe('User Login', () => {
 
   // })
 
-  it("Visit Home page", () =>{
+  it("first, go to home page", () =>
+  {
     cy.visit('/')
   })
+
 
   it("There is products on the page", () => {
     cy.get(".products article").should("be.visible");
   });
 
 
-  it("Show Login nav link", () => {
-    cy.get(".nav-link").should("contain.text", "Login");
+  it("There is 2 products on the page", () => {
+    cy.get(".products article").should("have.length", 2);
   });
 
-  it("Click on Login link and show login form", () => {
-    cy.get('.login-link').click({force:true})
-    cy.get('#email').type('aingarant@gmail.com')
-    cy.get('#password').type('aingaran')
-    cy.contains('Submit').click({force: true})
-    
+  it("Show current items in cart -- should by 0.", () => {
+    cy.get(".end-0").should("contain.text", "My Cart (0)");
   });
 
-
-  it("Show user is logged in.", () => {
-
-    cy.get(".current_user").should("contain.text", "Welcome,");
+  it("Add an item to cart, and show new items in cart (item should be 1)", () => {
+    cy.get('.products').contains('Add').click({force: true});
+    cy.get(".end-0").should("contain.text", "My Cart (1)");
   });
-
-  })
+});
