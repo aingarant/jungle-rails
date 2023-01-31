@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+
+  @error_message = "Error Message:"
   def new
   end
   
@@ -7,8 +9,10 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       redirect_to '/'
+
+      # if user signup failed
     else
-      redirect_to '/signup'
+      redirect_to '/signup', notice: "Signup Failed."
     end
   end 
 
