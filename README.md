@@ -29,3 +29,24 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+
+
+## Screenshots
+
+!["Home Page Screenshot"](https://github.com/aingarant/scheduler/blob/master/docs/shot1.png)
+Home Page Screenshot.  
+
+!["Products Screenshot"](https://github.com/aingarant/scheduler/blob/master/docs/shot2.png)
+Products Screenshot 
+
+!["Cart Screenshot."](https://github.com/aingarant/scheduler/blob/master/docs/shot3.png)
+Cart Screenshot
+
+!["Admin Screenshot."](https://github.com/aingarant/scheduler/blob/master/docs/shot4.png)
+Admin Screenshot
+
+
+Home Page on Mobile.
+
+
+Additng New or Editing Existing Interview Form on Mobile

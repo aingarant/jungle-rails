@@ -1,14 +1,13 @@
 <h1>Login</h1>
-
   <% flash.each do |type, msg| %>
     <div class="alert alert-danger" role="alert">
       <%= msg %>
     </div>
   <% end %>
 
-<%= form_tag '/login' do %>
 
+ <%= form_tag '/login' do %>
   Email: <%= text_field_tag :email %>
   Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
-<% end %>
+  <%= submit_tag "Login", class: 'btn btn-danger form-control my-2' %>
+<% end %> 
