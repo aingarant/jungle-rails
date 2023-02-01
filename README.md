@@ -44,9 +44,3 @@ Cart Screenshot
 
 !["Admin Screenshot."](https://github.com/aingarant/jungle-rails/blob/master/docs/shot4.png)
 Admin Screenshot
-
-
-Home Page on Mobile.
-
-
-Additng New or Editing Existing Interview Form on Mobile
